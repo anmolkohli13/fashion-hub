@@ -1,0 +1,407 @@
+body {
+    margin: 0px;
+    /* font-family: 'Elsie Swash Caps', cursive; */
+    /* overflow: hidden; */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+}
+
+p {
+    margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.row{
+    display: flex;
+}
+
+.container{
+    width: 1150px;
+    margin: 0 auto;
+}
+.w-100{
+    width: 100%;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+
+@media(max-width:1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media(max-width:992px) {
+    .container {
+        width: 760px;
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+}
+
+#header {
+    margin-top: 20px;
+
+}
+#header .row{
+    justify-content: space-between;
+}
+#header .logo h1{
+    text-transform: uppercase;
+    color: #64B3f4;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    font-family: 'Elsie Swash Caps', cursive;
+}
+
+#header .logo::first-letter{
+    color: #000000;
+}
+#header .list{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+#header .list select{
+    padding: 10px 10px;
+    margin-right: 20px;
+
+}
+#header .list button{
+    padding: 10px 15px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: -2px;
+    color: gray;
+}
+
+#header .list button:hover{
+    background-color: gray;
+    color: white;
+}
+
+#header .icons{
+    display: inline-block;
+    width: 6%;
+}
+#header .list .icons .user,#header .list .icons .cart {
+    display:inline-block;
+    margin-left: 5px;
+    font-size: 25px;
+    color: #64b3f4;
+    width: 37%;
+}
+#header .cart{
+    background-color: lightgray;
+    width: 38%;
+}
+#header .cart i{
+    width: 15%;
+}
+
+#header .header-nav ul{
+    margin-left: 150px;
+}
+
+#header .header-nav{
+    position: relative;
+}
+
+#header .header-nav ul li{
+    list-style: none;
+    display: inline-block;
+
+
+}
+#header .header-nav ul li a{
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-size: 14px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+#header .header-nav ul li a{
+    color: black;
+
+}
+#header .header-nav ul li .dropdown {
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    margin-top: 8px;
+    /* border: 2px solid black; */
+    /* display: flex; */
+    left: 0;
+
+}
+#header .dropdown ul{
+    margin-left: 0;
+    /* left: 0; */
+}
+
+#header .header-nav .dropdown ul li {
+
+    margin: 0px;
+    top: 12px;
+    justify-content: space-around;
+}
+
+#header .header-nav .dropdown .col-1 ul li,#header .header-nav .dropdown .col-2 ul li,#header .header-nav .dropdown .col-3 ul li
+ {
+    display:block;
+}
+
+#header .header-nav .dropdown ul li:hover {
+    background-color: #f3f5f7;
+    transition: 1s;
+}
+
+#header .header-nav .dropdown ul li a {
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: block;
+    padding: 12px;
+    font-weight: 600;
+}
+
+#header .header-nav ul li:hover .dropdown {
+    display: flex;
+}
+
+#header .header-nav ul li:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 100%;
+    display: none;
+
+}
+
+#header .header-nav ul li:hover:after {
+    display: block;
+}
+
+.col-1{
+    width: 33%;
+}
+.col-2{
+    width: 33%;
+
+}
+.col-3{
+    width: 33%;
+}
+
+#banner  {
+    width: 100%;
+    /* max-height: 600px; */
+    height: 100%;
+    background-image: url(../../../img/kidsbanner.jpg);
+    background-size: 100% 100%;
+    animation: slider 10s infinite linear;
+    position: absolute;
+}
+@keyframes slider{
+    0%,30%{
+        background-image: url(../../../img/kidsbanner.jpg);
+    }
+    33%,63%{
+        background-image: url(../../../img/menbanner.jpg);
+    }
+    66%,100%{
+        background-image: url(../../../img/womenbanner.jpg);
+    }
+}
+
+#banner .desc {
+    margin-left: 120px;
+    margin-top: 30px;
+    /* font-weight: 100; */
+}
+
+#banner .desc h2
+{
+    text-transform: uppercase;
+    color: #000;
+    /* font-weight: bold; */
+    font-size: 48px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+#banner .desc span{
+    font-family: 'Elsie Swash Caps' ,cursive;
+    color: #F0475F;
+    font-size: 96px;
+    font-weight: 500;
+}
+#banner .desc h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+#banner .offers {
+    margin-left: 120px;
+    margin-top: 45px;
+    animation: off 10s infinite linear;
+
+}
+
+#banner .offers span,p{
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+#banner .offers h2{
+    text-transform: uppercase;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+#banner .offers button{
+    background-color:#007BFF;
+    color: #fff;
+    /* font-weight: bold; */
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#banner .offers h2{
+    font-size: 35px;
+
+}
+#banner .offers span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+
+#section_1 .features ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+
+#section_1 .features ul li{
+    /* position: absolute; */
+    width: 25%;
+    list-style: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 80px 0;
+    font-weight: 600;
+
+}
+#section_1 .features ul li i{
+    font-size: 60px;
+    color: #0076BE;
+}
+#section_1 .features ul li:nth-child(even){
+    background-color: #BED0E9;
+}
+#section_1 .features ul li:nth-child(odd){
+    background-color: #D8E9FA;
+}
+#section_1 .images ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    
+}
+#section_1 .images ul li img {
+    width: 100%;
+
+}
+#section_2 {
+    margin-top: 50px;
+
+}
+#section_2 .heading {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+}
+#section_2 .heading::first-letter{
+    color: #0076BE;
+    font-size: 65px;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-weight: 800;
+
+}
+#section_2 .nav-bar ul li {
+
+    margin-top: 40px;
+    font-size: 18px;
+    color: #74777B;
+    display: inline-block;
+    width: 22%;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: solid #74777B 2px;
+    
+}
+#section_2 .nav-bar ul li:hover{
+    
+    border: solid #74777B 0.5px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+#main-navigation {}
+
+#main {}
+
+#sidebar {}
+
+#footer {}
